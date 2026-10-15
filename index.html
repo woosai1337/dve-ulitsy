@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070c18">
+<title>Две улицы — квест-история о гомельчанках, шагнувших в небо войны</title>
+<meta name="description" content="Виртуальная выставка о гомельчанках Полине Гельман и Галине Докутович — лётчицах 46-го гвардейского полка «ночных ведьм». Квест из семи остановок. Год белорусской женщины, 2026.">
+<meta name="author" content="Терещенко Матвей, 5 «В» класс, ГУО «Средняя школа №22 г. Гомеля»">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Две улицы — квест-история о гомельчанках, шагнувших в небо войны">
+<meta property="og:description" content="Две улицы, две подруги, две судьбы и одно небо. Квест-история к Году белорусской женщины.">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#content">Перейти к содержанию</a>
+
+<header class="head">
+  <div class="shell head__in">
+    <a class="logo" href="#top">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M6 26 L34 14" stroke="currentColor" stroke-width="1.6" fill="none"/>
+        <path d="M8 22 L32 12" stroke="currentColor" stroke-width="1.6" fill="none" opacity=".55"/>
+        <path d="M20 6 L24 17 L36 17 L26 24 L30 35 L20 28 L10 35 L14 24 L4 17 L16 17 Z" fill="currentColor" opacity=".9"/>
+      </svg>
+      <span><b>Две улицы</b><i>Год белорусской женщины · 2026</i></span>
+    </a>
+    <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Навигация">
+      <a href="#heroines">Героини</a>
+      <a href="#quest">Квест</a>
+      <a href="#chronicle">Хроника</a>
+      <a href="#memory">Память</a>
+      <a href="#sources">Источники</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <span id="top"></span>
+
+  <section class="hero">
+    <canvas class="hero__canvas" id="nightCanvas" aria-hidden="true"></canvas>
+    <div class="shell hero__grid">
+      <div class="hero__text">
+        <p class="caps kicker" id="heroKicker"></p>
+        <h1 class="hero__title"><span id="heroTitle"></span><em id="heroSub"></em></h1>
+        <p class="hero__lead" id="heroLead"></p>
+        <div class="hero__actions">
+          <a class="btn" href="#quest">Пройти квест</a>
+          <a class="btn btn--ghost" href="#heroines">Кто эти женщины</a>
+        </div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="heroines">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">01 — героини</p>
+        <div>
+          <h2>Две подруги из одного класса</h2>
+          <p>Они учились в одной гомельской школе, вместе уехали в Москву и вместе попали в один и тот же женский авиационный полк. Одной суждено было вернуться домой Героем, другой — остаться в небе войны.</p>
+        </div>
+      </div>
+      <div class="heroines" id="heroinesGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section--quest" id="quest">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">02 — квест</p>
+        <div>
+          <h2 id="questTitle"></h2>
+          <p id="questIntro"></p>
+        </div>
+      </div>
+      <div class="progress" role="status">
+        <div class="progress__bar"><span id="progressFill"></span></div>
+        <div class="progress__labels">
+          <span id="progressText">Пройдено 0 из 7 остановок</span>
+          <button class="linkbtn" type="button" id="questReset" hidden>Начать заново</button>
+        </div>
+      </div>
+      <ol class="route" id="route"></ol>
+      <div class="finale" id="finale" hidden>
+        <p class="caps">Маршрут пройден</p>
+        <h3>Теперь вы знаете, почему у этой улицы такое имя</h3>
+        <p>Расскажите об этом другим: поделитесь выставкой и поставьте хештеги.</p>
+        <div class="share" id="shareFinale"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="regiment">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">03 — полк</p>
+        <div>
+          <h2 id="regimentTitle"></h2>
+          <p id="regimentText"></p>
+        </div>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <section class="section dark" id="chronicle">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">04 — хроника</p>
+        <div>
+          <h2>Хроника двух судеб</h2>
+          <p>От рождения героинь до улицы, названной в честь Полины Гельман в Советском районе Гомеля.</p>
+        </div>
+      </div>
+      <ol class="chronicle" id="chronicleList"></ol>
+    </div>
+  </section>
+
+  <section class="section" id="memory">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">05 — память</p>
+        <div>
+          <h2>Гомель помнит</h2>
+          <p>Места в нашем городе, где живёт память о двух лётчицах. Многие из них можно посетить вместе с классом или с семьёй.</p>
+        </div>
+      </div>
+      <div class="cards" id="memoryGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="year">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">06 — о годе</p>
+        <div>
+          <h2 id="yearTitle"></h2>
+          <p id="yearText"></p>
+        </div>
+      </div>
+      <div class="numbers" id="yearFacts"></div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">07 — работа</p>
+        <div>
+          <h2 id="workTitle"></h2>
+          <p id="workText"></p>
+        </div>
+      </div>
+      <div class="cols">
+        <dl class="docs" id="workItems"></dl>
+        <div>
+          <h3 class="caps small-head">Как сделан сайт</h3>
+          <ul class="list" id="workTech"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sources">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">08 — источники</p>
+        <div>
+          <h2>На чём основана выставка</h2>
+          <p>Все факты о героинях взяты из открытых источников: краеведческого портала, музея военной славы, городских и республиканских материалов.</p>
+        </div>
+      </div>
+      <ol class="sources" id="sourcesList"></ol>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__grid">
+      <div>
+        <h4>Выставка</h4>
+        <p class="muted">«Две улицы» — квест-история о гомельчанках Полине Гельман и Галине Докутович. Подготовлена к Году белорусской женщины, 2026.</p>
+        <p class="hashtags" id="hashtags"></p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="#heroines">Героини</a></li>
+          <li><a href="#quest">Квест</a></li>
+          <li><a href="#chronicle">Хроника</a></li>
+          <li><a href="#memory">Память</a></li>
+          <li><a href="#sources">Источники</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Поделиться</h4>
+        <div class="share" id="shareFooter"></div>
+        <p class="muted small">Конкурс «Гордость Беларуси: образ женщины», номинация №1 «Женщина-герой».</p>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 · ГУО «Средняя школа №22 г. Гомеля», дружина имени Гриши Подобедова</span>
+      <span>Обновлено: октябрь 2026</span>
+    </div>
+  </div>
+</footer>
+
+<noscript>
+  <div class="shell noscript">
+    <p>Для прохождения квеста включите JavaScript. Главное: Полина Гельман (1919–2005) — гомельчанка, штурман 46-го гвардейского полка «ночных ведьм», совершила 860 боевых вылетов и получила звание Героя Советского Союза; её подруга Галина Докутович (1921–1943) погибла под Краснодаром. В Гомеле в честь обеих названы улицы.</p>
+  </div>
+</noscript>
+
+<script src="js/vendor/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/scene.js"></script>
+</body>
+</html>
