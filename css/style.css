@@ -186,19 +186,18 @@ a { color: inherit; }
 .sec-head p { color: var(--muted); margin: 12px 0 0; max-width: 72ch; }
 
 /* ——— героини ——— */
-.heroines { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.heroines { display: grid; grid-template-columns: 1fr; gap: 24px; }
 .heroine {
   background: var(--white);
   border: 1px solid var(--line-soft);
   border-radius: var(--r);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(280px, 400px) 1fr;
   box-shadow: 0 18px 40px -32px rgba(24, 32, 29, .55);
 }
-.heroine__photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #e9e3d6; }
-.heroine__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
-.heroine__photo--dokutovich img { object-position: center 46%; }
+.heroine__photo { position: relative; min-height: 100%; overflow: hidden; background: #e9e3d6; }
+.heroine__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 18%; display: block; }
 .heroine__tag {
   position: absolute; left: 14px; top: 14px;
   background: rgba(255, 253, 248, .95);
@@ -352,6 +351,8 @@ a { color: inherit; }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__media { padding: 0 0 54px 30px; max-width: 620px; }
   .heroines, .cards, .cols { grid-template-columns: 1fr; }
+  .heroine { grid-template-columns: 1fr; }
+  .heroine__photo { aspect-ratio: 4 / 3; min-height: 0; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .foot__grid { grid-template-columns: 1fr 1fr; }
   .sec-head { grid-template-columns: 1fr; gap: 8px; }
