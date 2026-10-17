@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#08130f">
+<meta name="theme-color" content="#f7f2e8">
 <title>Две улицы — квест-история о гомельчанках, шагнувших в небо войны</title>
 <meta name="description" content="Виртуальная выставка о гомельчанках Полине Гельман и Галине Докутович — лётчицах 46-го гвардейского полка «ночных ведьм». Квест из семи остановок. Год белорусской женщины, 2026.">
 <meta name="author" content="Терещенко Матвей, 5 «В» класс, ГУО «Средняя школа №22 г. Гомеля»">
@@ -16,7 +16,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -48,12 +48,12 @@
   <svg class="flagbar__orn" width="100%" height="28" role="presentation">
     <defs>
       <pattern id="belOrnament" width="56" height="28" patternUnits="userSpaceOnUse">
-        <path d="M28 3 L41 14 L28 25 L15 14 Z" fill="none" stroke="#d1232a" stroke-width="2"/>
-        <path d="M28 9.6 L32.4 14 L28 18.4 L23.6 14 Z" fill="#d1232a"/>
-        <path d="M0 3 L7 14 L0 25 L-7 14 Z" fill="none" stroke="#d1232a" stroke-width="2"/>
-        <path d="M56 3 L63 14 L56 25 L49 14 Z" fill="none" stroke="#d1232a" stroke-width="2"/>
-        <path d="M13.5 14 L16.5 11" stroke="#d1232a" stroke-width="1.4"/>
-        <path d="M42.5 14 L39.5 11" stroke="#d1232a" stroke-width="1.4"/>
+        <path d="M28 3 L41 14 L28 25 L15 14 Z" fill="none" stroke="#c0202a" stroke-width="2"/>
+        <path d="M28 9.6 L32.4 14 L28 18.4 L23.6 14 Z" fill="#c0202a"/>
+        <path d="M0 3 L7 14 L0 25 L-7 14 Z" fill="none" stroke="#c0202a" stroke-width="2"/>
+        <path d="M56 3 L63 14 L56 25 L49 14 Z" fill="none" stroke="#c0202a" stroke-width="2"/>
+        <path d="M13.5 14 L16.5 11" stroke="#c0202a" stroke-width="1.4"/>
+        <path d="M42.5 14 L39.5 11" stroke="#c0202a" stroke-width="1.4"/>
       </pattern>
     </defs>
     <rect width="100%" height="28" fill="url(#belOrnament)"/>
@@ -66,17 +66,28 @@
   <span id="top"></span>
 
   <section class="hero">
-    <canvas class="hero__canvas" id="nightCanvas" aria-hidden="true"></canvas>
     <div class="shell hero__grid">
       <div class="hero__text">
         <p class="caps kicker" id="heroKicker"></p>
-        <h1 class="hero__title"><span id="heroTitle"></span><em id="heroSub"></em></h1>
+        <h1 class="hero__title"><span id="heroTitle"></span></h1>
+        <p class="hero__sub" id="heroSub"></p>
         <p class="hero__lead" id="heroLead"></p>
         <div class="hero__actions">
           <a class="btn" href="#quest">Пройти квест</a>
           <a class="btn btn--ghost" href="#heroines">Кто эти женщины</a>
         </div>
         <div class="stats" id="stats"></div>
+      </div>
+
+      <div class="hero__media">
+        <figure class="hero__main">
+          <img src="assets/photos/po2.jpg" alt="Штурман 46-го гвардейского полка у самолёта По-2" width="1400" height="977">
+          <figcaption>Штурман 46-го гвардейского полка у самолёта По-2. Фотохроника ТАСС, фотограф Е. Халдей</figcaption>
+        </figure>
+        <figure class="hero__inset">
+          <img src="assets/photos/gelman-awards.jpg" alt="Полина Гельман с боевыми наградами" width="369" height="556">
+          <figcaption>Полина Гельман, Герой Советского Союза</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -244,9 +255,7 @@
   </div>
 </noscript>
 
-<script src="js/vendor/three.min.js"></script>
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
-<script src="js/scene.js"></script>
 </body>
 </html>
