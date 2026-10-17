@@ -1,4 +1,4 @@
-/* «Улица Галины Докутович» — сборка страницы и логика квеста. */
+/* «Улица Галины Докутович» — сборка страницы и логика маршрута. */
 (function () {
   "use strict";
 
@@ -72,7 +72,7 @@
     });
   }
 
-  /* ——— квест ——— */
+  /* ——— маршрут ——— */
   function renderQuest() {
     qs("#questTitle").textContent = DATA.quest.title;
     qs("#questIntro").textContent = DATA.quest.intro;
