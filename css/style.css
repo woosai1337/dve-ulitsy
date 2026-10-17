@@ -188,7 +188,7 @@ a { color: inherit; }
 .hero__inset figcaption { font-size: .63rem; color: var(--muted); padding: 6px 2px 9px; line-height: 1.35; }
 
 /* ——— секции ——— */
-.section { padding: clamp(52px, 7vw, 88px) 0; scroll-margin-top: 92px; }
+.section { padding: clamp(52px, 7vw, 88px) 0; scroll-margin-top: 135px; }
 .section + .section { border-top: 1px solid var(--line-soft); }
 .section--quest { background: var(--paper-2); }
 .section.dark { background: var(--deep); color: var(--deep-ink); }
@@ -529,13 +529,14 @@ a { color: inherit; }
   .topbar__text { font-size: .58rem; letter-spacing: .07em; }
   .topbar__text-full { display: none; }
   .topbar__text-short { display: inline; }
+  .section { scroll-margin-top: 125px; }
   .menu {
     position: absolute; top: 100%; left: 0; right: 0; bottom: auto;
     flex-direction: column; gap: 0;
     background: var(--paper-2);
     border-bottom: 1px solid var(--line);
     padding: 10px 20px 20px;
-    max-height: calc(100vh - 120px);
+    max-height: calc(100vh - 130px);
     overflow-y: auto;
     transform: translateY(-130%);
     transition: transform .3s ease;
