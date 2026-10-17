@@ -46,7 +46,7 @@ python3 -m http.server 8000
 
 GitHub Pages, ветка `main`, каталог `/(root)`. Файл `.nojekyll` уже на месте.
 
-Живая версия: https://woosai1337.github.io/dve-ulitsy/
+Живая версия: https://woosai1337.github.io/ulitsa-dokutovich/
 
 ## Правка контента
 
