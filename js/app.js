@@ -1,8 +1,8 @@
-/* «Две улицы» — сборка страницы и логика квеста. Без зависимостей. */
+/* «Улица Галины Докутович» — сборка страницы и логика квеста. */
 (function () {
   "use strict";
 
-  var PASSED_KEY = "dve-ulitsy-passed-v1";
+  var PASSED_KEY = "dokutovich-quest-v1";
   var stops = (DATA.quest && DATA.quest.stops) || [];
   var totalStops = stops.length;
   var passed = loadPassed();
@@ -150,6 +150,7 @@
     li.classList.add("is-passed");
     [].forEach.call(opts.querySelectorAll(".opt"), function (b, i) {
       b.disabled = true;
+      b.classList.remove("is-wrong");
       if (i === stop.question.answer) b.classList.add("is-right");
     });
     explain.hidden = false;
@@ -223,6 +224,26 @@
       card.appendChild(node("p", null, m.text));
       box.appendChild(card);
     });
+  }
+
+  function renderPlane() {
+    var p = DATA.plane;
+    if (!p) return;
+    var title = qs("#planeTitle");
+    var text = qs("#planeText");
+    var note = qs("#planeNote");
+    var specs = qs("#planeSpecs");
+    if (title) title.textContent = p.title;
+    if (text) text.textContent = p.text;
+    if (note) note.textContent = p.note;
+    if (specs) {
+      p.specs.forEach(function (s) {
+        var row = node("div");
+        row.appendChild(node("dt", null, s.k));
+        row.appendChild(node("dd", null, s.v));
+        specs.appendChild(row);
+      });
+    }
   }
 
   function renderYear() {
@@ -332,6 +353,7 @@
     renderHeroines();
     renderQuest();
     renderRegiment();
+    renderPlane();
     renderChronicle();
     renderMemory();
     renderYear();

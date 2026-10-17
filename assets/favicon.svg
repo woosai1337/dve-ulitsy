@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Две улицы">
-  <rect width="64" height="64" rx="13" fill="#070c18"/>
-  <path d="M32 7.5l5.9 15.9 16.9 .6-13.5 10.6 4.9 17.2L32 41.4 17.8 51.8l4.9-17.2L9.2 24l16.9-.6z" fill="#efc75e"/>
-  <rect x="10" y="53.5" width="44" height="3.4" rx="1.7" fill="#e02b34"/>
-  <rect x="10" y="58.4" width="44" height="3.4" rx="1.7" fill="#46a55b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Улица Галины Докутович">
+  <rect width="64" height="64" rx="13" fill="#f7f2e8"/>
+  <path d="M32 8l5.4 14.6 15.5.5-12.4 9.7 4.5 15.7L32 40.4l-13 8.1 4.5-15.7L11.1 23l15.5-.5z" fill="#c0202a"/>
+  <rect x="10" y="54" width="44" height="3.2" rx="1.6" fill="#c0202a"/>
+  <rect x="10" y="58.2" width="44" height="3.8" rx="1.9" fill="#2f7a45"/>
 </svg>

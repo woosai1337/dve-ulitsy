@@ -4,15 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f2e8">
-<title>Улица Полины Гельман — квест-история о гомельчанке, шагнувшей в небо войны</title>
-<meta name="description" content="Виртуальная выставка о гомельчанке Полине Гельман — штурмане 46-го гвардейского полка «ночных ведьм», Герое Советского Союза. Квест из шести остановок. Год белорусской женщины, 2026.">
+<title>Улица Галины Докутович — квест-история о гомельчанке, шагнувшей в небо войны</title>
+<meta name="description" content="Виртуальная выставка о гомельчанке Галине Докутович — штурмане 46-го гвардейского полка «ночных ведьм». 136 боевых вылетов, улица в Гомеле и квест из шести остановок. Год белорусской женщины, 2026.">
 <meta name="author" content="Терещенко Матвей, 5 «В» класс, ГУО «Средняя школа №22 г. Гомеля»">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Улица Полины Гельман — квест-история о гомельчанке, шагнувшей в небо войны">
-<meta property="og:description" content="860 боевых вылетов, Золотая Звезда и улица в Советском районе Гомеля. Квест-история к Году белорусской женщины.">
+<meta property="og:site_name" content="Улица Галины Докутович">
+<meta property="og:title" content="Улица Галины Докутович — квест-история о гомельчанке, шагнувшей в небо войны">
+<meta property="og:description" content="136 боевых вылетов, 22 года жизни и улица в Гомеле. Квест-история о штурмане 46-го гвардейского полка «ночных ведьм».">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:image" content="assets/og.jpg">
+<meta property="og:url" content="https://woosai1337.github.io/dve-ulitsy/">
+<meta property="og:image" content="https://woosai1337.github.io/dve-ulitsy/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Улица Галины Докутович — квест-история о гомельчанке-лётчице">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Улица Галины Докутович">
+<meta name="twitter:description" content="Квест-история о штурмане 46-го гвардейского полка «ночных ведьм». 136 боевых вылетов и улица в Гомеле.">
+<meta name="twitter:image" content="https://woosai1337.github.io/dve-ulitsy/assets/og.jpg">
+<link rel="canonical" href="https://woosai1337.github.io/dve-ulitsy/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +40,13 @@
         <path d="M8 22 L32 12" stroke="currentColor" stroke-width="1.6" fill="none" opacity=".55"/>
         <path d="M20 6 L24 17 L36 17 L26 24 L30 35 L20 28 L10 35 L14 24 L4 17 L16 17 Z" fill="currentColor" opacity=".9"/>
       </svg>
-      <span><b>Полина Гельман</b><i>Год белорусской женщины · 2026</i></span>
+      <span><b>Галина Докутович</b><i>Год белорусской женщины · 2026</i></span>
     </a>
     <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <nav class="menu" id="menu" aria-label="Навигация">
       <a href="#heroines">Героиня</a>
       <a href="#quest">Квест</a>
+      <a href="#plane">По-2</a>
       <a href="#chronicle">Хроника</a>
       <a href="#memory">Память</a>
       <a href="#sources">Источники</a>
@@ -56,10 +66,10 @@
   <section class="hero">
     <div class="shell hero__grid">
       <div class="hero__text">
-        <p class="caps kicker" id="heroKicker"></p>
-        <h1 class="hero__title"><span id="heroTitle"></span></h1>
-        <p class="hero__sub" id="heroSub"></p>
-        <p class="hero__lead" id="heroLead"></p>
+        <p class="caps kicker" id="heroKicker">Виртуальная выставка · Год белорусской женщины · 2026</p>
+        <h1 class="hero__title"><span id="heroTitle">Улица Галины Докутович</span></h1>
+        <p class="hero__sub" id="heroSub">Квест-история о гомельчанке, шагнувшей в небо войны</p>
+        <p class="hero__lead" id="heroLead">В Гомеле есть улица Докутович. 860 метров через Центральный и Железнодорожный районы — и за этим именем 22 года жизни: аэроклуб, Московский авиационный институт, 136 боевых вылетов и память, которая живёт в городе.</p>
         <div class="hero__actions">
           <a class="btn" href="#quest">Пройти квест</a>
           <a class="btn btn--ghost" href="#heroines">Кто она</a>
@@ -69,12 +79,12 @@
 
       <div class="hero__media">
         <figure class="hero__main">
-          <img src="assets/photos/po2.jpg" alt="Штурман 46-го гвардейского полка у самолёта По-2" width="1400" height="977">
-          <figcaption>Штурман 46-го гвардейского полка у самолёта По-2. Фотохроника ТАСС, фотограф Е. Халдей</figcaption>
+          <img src="assets/photos/dokutovich-mural.jpg" alt="Мурал с портретом Галины Докутович и самолётами По-2 на доме в Гомеле" width="1200" height="1600">
+          <figcaption>Мурал Галине Докутович на улице Красной, 3 в Гомеле. Фото: Farmazon2025, CC0</figcaption>
         </figure>
         <figure class="hero__inset">
-          <img src="assets/photos/gelman-awards.jpg" alt="Полина Гельман с боевыми наградами" width="369" height="556">
-          <figcaption>Полина Гельман, Герой Советского Союза</figcaption>
+          <img src="assets/photos/po2.jpg" alt="Штурман 46-го гвардейского полка у самолёта По-2" width="1400" height="977">
+          <figcaption>Штурман 46-го гвардейского полка у По-2. Фотохроника ТАСС, фотограф Е. Халдей</figcaption>
         </figure>
       </div>
     </div>
@@ -85,8 +95,8 @@
       <div class="sec-head">
         <p class="caps idx">01 — героиня</p>
         <div>
-          <h2>Одна судьба — 860 вылетов</h2>
-          <p>Гомельчанка, школьница, студентка исторического факультета — и штурман женского авиационного полка. История одной женщины, в которой поместились война, небо и улица с её именем.</p>
+          <h2>Одна судьба — 136 вылетов</h2>
+          <p>Гомельчанка, школьница, курсант аэроклуба, студентка Московского авиационного института — и штурман женского полка. История одной женщины, в которой поместились война, небо и улица с её именем.</p>
         </div>
       </div>
       <div class="heroines" id="heroinesGrid"></div>
@@ -98,8 +108,8 @@
       <div class="sec-head">
         <p class="caps idx">02 — квест</p>
         <div>
-          <h2 id="questTitle"></h2>
-          <p id="questIntro"></p>
+          <h2 id="questTitle">Шесть остановок одной судьбы</h2>
+          <p id="questIntro">Квест начинается на улице Докутович в Гомеле. Открывайте остановки одну за другой, читайте историю и проверяйте себя одним вопросом.</p>
         </div>
       </div>
       <div class="progress" role="status">
@@ -124,21 +134,50 @@
       <div class="sec-head">
         <p class="caps idx">03 — полк</p>
         <div>
-          <h2 id="regimentTitle"></h2>
-          <p id="regimentText"></p>
+          <h2 id="regimentTitle">Полк, которого боялись по ночам</h2>
+          <p id="regimentText">46-й гвардейский ночной бомбардировочный авиационный полк был женским.</p>
         </div>
       </div>
       <div class="gallery" id="gallery"></div>
     </div>
   </section>
 
+  <section class="section section--plane" id="plane">
+    <div class="shell">
+      <div class="sec-head">
+        <p class="caps idx">04 — самолёт</p>
+        <div>
+          <h2 id="planeTitle">По-2: фанерный биплан, который летал ночью</h2>
+          <p id="planeText">По-2 (У-2) — лёгкий биплан Николая Поликарпова.</p>
+        </div>
+      </div>
+      <div class="plane">
+        <div class="plane__stage" id="planeStage">
+          <canvas id="planeCanvas" tabindex="0" role="img" aria-label="Интерактивная 3D-модель самолёта По-2. Потяните модель мышью или поверните стрелками клавиатуры."></canvas>
+          <img class="plane__fallback" src="assets/photos/po2.jpg" alt="Штурман 46-го гвардейского полка у самолёта По-2" width="1400" height="977">
+          <span class="plane__badge">3D-модель</span>
+          <span class="plane__hint">Потяните, чтобы повернуть</span>
+        </div>
+        <aside class="plane__side">
+          <p class="caps">Тактико-технические данные</p>
+          <dl class="plane__specs" id="planeSpecs"></dl>
+          <p class="plane__note" id="planeNote">Учебная 3D-модель по чертежам По-2. Это не копия конкретного борта.</p>
+        </aside>
+      </div>
+      <figure class="plane__real">
+        <img src="assets/photos/po2-modern.jpg" alt="Современный восстановленный самолёт По-2 на аэродроме" width="1400" height="775" loading="lazy">
+        <figcaption><b>Настоящий По-2.</b> Восстановленный самолёт этого типа на аэродроме. В годы войны на таких машинах летали полки ночных бомбардировщиков. Фото: Peer.Gynt, 2011. <a href="https://commons.wikimedia.org/wiki/File:Polikarpov_U-2_(Po-2)_Biplane._1928._%D0%91%D0%B8%D0%BF%D0%BB%D0%B0%D0%BD_%D0%9F%D0%BE%D0%BB%D0%B8%D0%BA%D0%B0%D1%80%D0%BF%D0%BE%D0%B2%D0%B0_%D0%A3-2_(%D0%9F%D0%BE-2).jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="section dark" id="chronicle">
     <div class="shell">
       <div class="sec-head">
-        <p class="caps idx">04 — хроника</p>
+        <p class="caps idx">05 — хроника</p>
         <div>
-          <h2>Хроника двух судеб</h2>
-          <p>От рождения героинь до улицы, названной в честь Полины Гельман в Советском районе Гомеля.</p>
+          <h2>Хроника одной судьбы</h2>
+          <p>От рождения Галины в Гомеле до мурала на улице Красной и Года белорусской женщины.</p>
         </div>
       </div>
       <ol class="chronicle" id="chronicleList"></ol>
@@ -148,10 +187,10 @@
   <section class="section" id="memory">
     <div class="shell">
       <div class="sec-head">
-        <p class="caps idx">05 — память</p>
+        <p class="caps idx">06 — память</p>
         <div>
           <h2>Гомель помнит</h2>
-          <p>Места в нашем городе, где живёт память о двух лётчицах. Многие из них можно посетить вместе с классом или с семьёй.</p>
+          <p>Места в нашем городе, где живёт память о Галине Докутович. Многие из них можно посетить вместе с классом или с семьёй.</p>
         </div>
       </div>
       <div class="cards" id="memoryGrid"></div>
@@ -161,10 +200,10 @@
   <section class="section" id="year">
     <div class="shell">
       <div class="sec-head">
-        <p class="caps idx">06 — о годе</p>
+        <p class="caps idx">07 — о годе</p>
         <div>
-          <h2 id="yearTitle"></h2>
-          <p id="yearText"></p>
+          <h2 id="yearTitle">2026 — Год белорусской женщины</h2>
+          <p id="yearText">Указом Президента Республики Беларусь №1 2026 год объявлен в стране Годом белорусской женщины.</p>
         </div>
       </div>
       <div class="numbers" id="yearFacts"></div>
@@ -174,10 +213,10 @@
   <section class="section" id="work">
     <div class="shell">
       <div class="sec-head">
-        <p class="caps idx">07 — работа</p>
+        <p class="caps idx">08 — работа</p>
         <div>
-          <h2 id="workTitle"></h2>
-          <p id="workText"></p>
+          <h2 id="workTitle">О конкурсной работе</h2>
+          <p id="workText">Выставка «Улица Галины Докутович» подготовлена для областного конкурса ОО «БРПО».</p>
         </div>
       </div>
       <div class="cols">
@@ -193,10 +232,10 @@
   <section class="section" id="sources">
     <div class="shell">
       <div class="sec-head">
-        <p class="caps idx">08 — источники</p>
+        <p class="caps idx">09 — источники</p>
         <div>
           <h2>На чём основана выставка</h2>
-          <p>Все факты о героинях взяты из открытых источников: краеведческого портала, музея военной славы, городских и республиканских материалов.</p>
+          <p>Все факты о Галине Докутович взяты из открытых источников: краеведческого портала, музея военной славы, городских и республиканских материалов.</p>
         </div>
       </div>
       <ol class="sources" id="sourcesList"></ol>
@@ -211,7 +250,7 @@
     <div class="foot__grid">
       <div>
         <h4>Выставка</h4>
-        <p class="muted">«Улица Полины Гельман» — квест-история о гомельчанке, штурмане 46-го гвардейского полка и Герое Советского Союза. Подготовлена к Году белорусской женщины, 2026.</p>
+        <p class="muted">«Улица Галины Докутович» — квест-история о гомельчанке, штурмане 46-го гвардейского полка «ночных ведьм». Подготовлена к Году белорусской женщины, 2026.</p>
         <p class="hashtags" id="hashtags"></p>
       </div>
       <div>
@@ -219,6 +258,7 @@
         <ul>
           <li><a href="#heroines">Героиня</a></li>
           <li><a href="#quest">Квест</a></li>
+          <li><a href="#plane">По-2</a></li>
           <li><a href="#chronicle">Хроника</a></li>
           <li><a href="#memory">Память</a></li>
           <li><a href="#sources">Источники</a></li>
@@ -239,11 +279,13 @@
 
 <noscript>
   <div class="shell noscript">
-    <p>Для прохождения квеста включите JavaScript. Главное: Полина Гельман (1919–2005) — гомельчанка, штурман 46-го гвардейского полка «ночных ведьм», совершила 860 боевых вылетов и получила звание Героя Советского Союза; её подруга Галина Докутович (1921–1943) погибла под Краснодаром. В Гомеле в честь обеих названы улицы.</p>
+    <p>Для прохождения квеста включите JavaScript. Главное: Галина Докутович (1921–1943) — гомельчанка, штурман 46-го гвардейского полка «ночных ведьм», совершила 136 боевых вылетов и погибла 1 августа 1943 года над станицей Крымской. В Гомеле её именем названа улица.</p>
   </div>
 </noscript>
 
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
+<script src="js/vendor/three.min.js" defer></script>
+<script src="js/plane.js" defer></script>
 </body>
 </html>
